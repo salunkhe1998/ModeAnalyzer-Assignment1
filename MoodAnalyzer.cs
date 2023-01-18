@@ -43,6 +43,7 @@ namespace ModeAnalyzerAssignment1
         public string analyseMood1()
         {
             MoodAnalyser obja = new MoodAnalyser();
+            obja.msg = "HAPPY";
             return obja.msg;
 
         }
