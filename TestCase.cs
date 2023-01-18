@@ -1,25 +1,18 @@
-﻿using ModeAnalyzerAssignment;
-using System.Diagnostics.SymbolStore;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace TestCaseMoodAnalyzer
+namespace ModeAnalyzerAssignment
 {
-    [TestClass]
-    public class UnitTest1
+
+    public class MoodAnalyzerNullException : Exception
     {
-        [TestMethod]
-        public void TestCase1_1()
+        public MoodAnalyzerNullException(string msg) : base(msg)
         {
-            string input = "I am in Sad Mood";
-            string expected = "SAD";
 
-
-            MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-
-            string actual = moodAnalyzer.analyseMood(input);
-
-            Assert.AreEqual(expected, actual);
         }
-
-
     }
+
 }
