@@ -1,5 +1,4 @@
 ﻿using ModeAnalyzerAssignment1;
-using ModeAnalyzerAssignment1;
 using System.Diagnostics.SymbolStore;
 
 namespace TestCaseMoodAnalyzer
