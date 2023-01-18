@@ -1,4 +1,6 @@
-﻿namespace ModeAnalyzerAssignment
+﻿using ModeAnalyzerAssignment1;
+
+namespace ModeAnalyzerAssignment1
 {
     public class Program
     {
