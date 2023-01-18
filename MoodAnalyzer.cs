@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic;
+﻿
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.SymbolStore;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModeAnalyzerAssignment1
+namespace ModeAnalyzerAssignment
 {
     public class MoodAnalyzer
     {
@@ -37,23 +38,27 @@ namespace ModeAnalyzerAssignment1
 
         }
 
+
+
         public string analyseMood1()
         {
-            MoodAnalyser obja = new MoodAnalyser(msg);
 
-            if (obja.msg == null)
+            MoodAnalyser moodAnalyser = new MoodAnalyser(msg);
+            msg = "";
+            try
             {
-
-                obja.msg = "Happy";
-
-
+                if (msg.Equals(string.Empty))
+                    throw new MoodAnalyzerNullException(MoodAnalyzerNullException.Exception_Type.EMPTY_MOOD, "Mood can not be Empty.");
+                else if (msg.ToUpper().Contains("SAD"))
+                    return "SAD";
+                else return "HAPPY";
             }
-            else
+            catch (NullReferenceException)
             {
-                Console.WriteLine("Message is not NULL" + obja.msg);
+                //return "HAPPY";
+                throw new MoodAnalyzerNullException(MoodAnalyzerNullException.Exception_Type.NULL_MOOD, "Mood can not be Null.");
             }
-            obja.msg = "Happy";
-            return obja.msg;
+
         }
 
     }
