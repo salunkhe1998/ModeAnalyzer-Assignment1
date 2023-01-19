@@ -1,5 +1,6 @@
 ﻿using ModeAnalyzerAssignment1;
 using ModeAnalyzerAssignment1;
+using ModeAnalyzerAssignment1S;
 using System.Diagnostics.SymbolStore;
 
 namespace TestCaseMoodAnalyzer
@@ -52,6 +53,19 @@ namespace TestCaseMoodAnalyzer
             }
         }
 
+        [TestMethod]
+        public void UseCase3_2()
+        {
+            try
+            {
+                var analyze = new MoodAnalyser("");
+                string Returned_Message = analyze.analyseMood1();
+                Assert.AreEqual("HAPPY", Returned_Message);
+            }
+            catch (MoodAnalyzerNullException Exception)
+            {
+                Assert.AreEqual("Mood can not be Empty.", Exception.Message);
+            }
+        }
     }
 }
-Footer
