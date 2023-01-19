@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModeAnalyzerAssignment
+namespace ModeAnalyzerAssignment1
 {
 
 
@@ -25,5 +25,4 @@ namespace ModeAnalyzerAssignment
         }
     }
 
-}
 }
