@@ -1,5 +1,5 @@
-﻿
-using Microsoft.VisualBasic;
+﻿using Microsoft.VisualBasic;
+using ModeAnalyzerAssignment1;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.SymbolStore;
