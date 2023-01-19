@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModeAnalyzerAssignment1
+namespace ModeAnalyzerAssignment
 {
 
 
@@ -14,7 +14,9 @@ namespace ModeAnalyzerAssignment1
         public enum Exception_Type
         {
             EMPTY_MOOD,
-            NULL_MOOD
+            NULL_MOOD,
+            NO_SUCH_CLASS,
+            NO_SUCH_CONSTRUCTOR
         }
 
         public MoodAnalyzerNullException(Exception_Type type, string msg) : base(msg)
@@ -23,4 +25,5 @@ namespace ModeAnalyzerAssignment1
         }
     }
 
+}
 }
